@@ -12,6 +12,8 @@ inputBox.onkeypress = function(e){
         myText.id = "myMessage";
         myText.innerHTML = "<p>"+message+"</p>";
         messageBox.appendChild(myText);
+
+        // Fetch request to server
         fetch('/',{method:'POST',
         headers:{'Accept':'application/json','Content-Type':'application/json'},
         body:JSON.stringify({main: message,conID:conID})}).then(data =>{
