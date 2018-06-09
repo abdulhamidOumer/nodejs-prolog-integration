@@ -1,0 +1,63 @@
+body{
+    background: #414040;
+}
+#messageContainer{
+    border: 5px solid #2e50be;
+    width: 80%;
+    margin-left: 10%;
+    background: #ffffff;
+    height: 95%;
+    border-radius: 20px;
+    overflow: auto;
+    margin-bottom: 20%;
+    position: fixed;
+}
+
+#message{
+    width: 80%;
+    margin-left: 10%;
+    border: 2px solid #2e50be;
+    border-radius: 20px;
+    height: 7%;
+    margin-bottom: 1%;
+    background: #ffffff;
+    padding-left: 10px;
+    bottom: 0%;
+    position: absolute;
+    color: black;
+}
+
+
+#myMessage{
+    width: 75%;
+    border-radius: 20px;
+    background: #2e50be;
+    position:relative;
+    margin-right: 4%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    float: right;
+    clear: right;
+    bottom: 0%;
+    color: #ffffff;
+    text-align: left;
+    padding-left: 10px;
+    font-family: "Lato",sans-serif;
+}
+
+#aiMessage{
+    width: 75%;
+    border-radius: 20px;
+    margin-bottom: 4%;
+    background: #dbdbdb;
+    position:relative;
+    margin-left: 4%;
+    margin-top: 3%;
+    float: left;
+    clear: left;
+    bottom: 0%;
+    color: #353535;
+    text-align: left;
+    padding-left: 10px;
+    font-family: "Lato",sans-serif;
+}

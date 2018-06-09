@@ -1,0 +1,15 @@
+{
+  "name": "prolog-and-nodejs-integration",
+  "version": "1.0.0",
+  "description": "A simple integration between node js and prolog to implement an agent that gives a description about vertebrate animals.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Abdulhamid Mohammed",
+  "license": "MIT",
+  "devDependencies": {
+    "swipl": "^1.0.3"
+  }
+}
