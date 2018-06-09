@@ -13,7 +13,7 @@ var learningValues = {}
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
-app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/public/'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 app.get('/', function(req, res) {
     var adress = forwarded(req,req.headers);
     console.log(adress);
-    res.sendFile(path.join(__dirname +'/main.html'));
+    res.sendFile(path.join(__dirname +'/public/main.html'));
 });
 
 app.post('/',function(req,res){
@@ -31,7 +31,7 @@ app.post('/',function(req,res){
     var conID = req.body.conID;
     console.log(req.body.main);
     var result = null;
-    if(conID==="None"){
+    if(conID==="None" || conID===null || conID === undefined){
        result = pl(message);
     }
     else{
@@ -48,7 +48,7 @@ app.listen(port, function() {
 
 function pl(word){
     var parameter = "habitat("+word+",X).";
-    var ret = swipl.call('[animals].');
+    var ret = swipl.call('[prolog/animals].');
     var classCall = swipl.call('class('+word+',X)');
     var aan = "A ";
     if(word[0]==='a'||word[0]==='e'||word[0]==='i'||word[0]==='o'||word[0]==='u'){
@@ -222,7 +222,7 @@ function learnFromData(){
 
 function addtoKnowledgeBase(data_set){
     const fs = require('fs');
-    var file_path = 'animals.pl';
+    var file_path = 'prolog/animals.pl';
 
     fs.readFile(file_path,'utf8',function(err,data){
         if(err){
